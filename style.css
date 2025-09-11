@@ -1,0 +1,86 @@
+/* --- خط جوجل لإضفاء لمسة عصرية --- */
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap');
+
+/* --- إعدادات عامة --- */
+body {
+    font-family: 'Cairo', sans-serif; /* استخدام خط "كايرو" الجميل */
+    margin: 0;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); /* خلفية متدرجة جذابة */
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* --- الحاوية الرئيسية --- */
+.container {
+    background: rgba(255, 255, 255, 0.1); /* خلفية شبه شفافة */
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(10px); /* تأثير زجاجي مميز */
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    max-width: 500px;
+    width: 100%;
+}
+
+/* --- العنوان الرئيسي --- */
+header h1 {
+    font-size: 2.5em;
+    font-weight: 700;
+    margin-bottom: 5px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+}
+
+header p {
+    font-size: 1.2em;
+    opacity: 0.9;
+    margin-bottom: 30px;
+}
+
+/* --- حاوية أزرار الخدمات --- */
+.services-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* عمودان متساويان */
+    gap: 20px; /* مسافة بين الأزرار */
+}
+
+/* --- تصميم الأزرار --- */
+.service-button {
+    background: rgba(255, 255, 255, 0.25);
+    color: #ffffff;
+    text-decoration: none;
+    padding: 20px;
+    border-radius: 15px;
+    font-size: 1.1em;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    transition: background 0.3s, transform 0.3s;
+}
+
+.service-button:hover {
+    background: rgba(255, 255, 255, 0.4);
+    transform: scale(1.05); /* يكبر الزر قليلاً عند اللمس */
+}
+
+.service-button .icon {
+    font-size: 3em; /* أيقونات أكبر */
+    filter: drop-shadow(0 4px 4px rgba(0,0,0,0.2));
+}
+
+/* --- التذييل --- */
+footer {
+    margin-top: 30px;
+    font-size: 0.9em;
+    opacity: 0.8;
+}
