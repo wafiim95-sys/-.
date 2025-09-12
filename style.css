@@ -3,84 +3,87 @@
 
 /* --- إعدادات عامة --- */
 body {
-    font-family: 'Cairo', sans-serif; /* استخدام خط "كايرو" الجميل */
+    font-family: 'Cairo', sans-serif;
     margin: 0;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); /* خلفية متدرجة جذابة */
-    color: #ffffff;
+    background: linear-gradient(135deg, #3a47d5 0%, #00d2ff 100%); /* تدرج لوني أزرق جديد */
+    color: #333; /* تغيير لون النص الأساسي للأسود ليتناسب مع البطاقات البيضاء */
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    min-height: 100vh;
-    text-align: center;
     padding: 20px;
     box-sizing: border-box;
-}
-
-/* --- الحاوية الرئيسية --- */
-.container {
-    background: rgba(255, 255, 255, 0.1); /* خلفية شبه شفافة */
-    padding: 30px;
-    border-radius: 20px;
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-    backdrop-filter: blur(10px); /* تأثير زجاجي مميز */
-    -webkit-backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.18);
-    max-width: 500px;
-    width: 100%;
+    min-height: 100vh;
 }
 
 /* --- العنوان الرئيسي --- */
-header h1 {
+.header-text {
+    color: #ffffff; /* إبقاء لون نصوص العنوان أبيض */
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.header-text h1 {
     font-size: 2.5em;
     font-weight: 700;
     margin-bottom: 5px;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
 }
 
-header p {
+.header-text p {
     font-size: 1.2em;
     opacity: 0.9;
-    margin-bottom: 30px;
 }
 
-/* --- حاوية أزرار الخدمات --- */
+/* --- حاوية البطاقات الرئيسية --- */
 .services-container {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* عمودان متساويان */
-    gap: 20px; /* مسافة بين الأزرار */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* تصميم متجاوب يناسب كل الشاشات */
+    gap: 25px;
+    width: 100%;
+    max-width: 900px; /* تحديد أقصى عرض للحاوية */
 }
 
-/* --- تصميم الأزرار --- */
-.service-button {
-    background: rgba(255, 255, 255, 0.25);
-    color: #ffffff;
-    text-decoration: none;
-    padding: 20px;
+/* --- تصميم البطاقة الواحدة (Card) --- */
+.service-card {
+    background: rgba(255, 255, 255, 0.9); /* خلفية بيضاء شبه شفافة */
     border-radius: 15px;
-    font-size: 1.1em;
-    font-weight: bold;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    overflow: hidden; /* مهم جداً لإخفاء أي أجزاء من الصورة تخرج عن الحواف الدائرية */
+    text-decoration: none;
+    color: #333;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 15px;
-    border: 1px solid rgba(255, 255, 255, 0.4);
-    transition: background 0.3s, transform 0.3s;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.service-button:hover {
-    background: rgba(255, 255, 255, 0.4);
-    transform: scale(1.05); /* يكبر الزر قليلاً عند اللمس */
+.service-card:hover {
+    transform: translateY(-10px); /* ترتفع البطاقة للأعلى عند اللمس */
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2);
 }
 
-.service-button .icon {
-    font-size: 3em; /* أيقونات أكبر */
-    filter: drop-shadow(0 4px 4px rgba(0,0,0,0.2));
+/* --- تنسيق الصورة داخل البطاقة --- */
+.service-card img {
+    width: 100%; /* الصورة تملأ عرض البطاقة بالكامل */
+    height: 200px; /* ارتفاع ثابت ومناسب للصور */
+    object-fit: cover; /* أهم خاصية: تضمن أن الصورة تملأ المساحة دون تشويه أو تمدد */
+}
+
+/* --- تنسيق النص داخل البطاقة --- */
+.card-content {
+    padding: 20px;
+    text-align: center;
+}
+
+.card-content h3 {
+    margin: 0;
+    font-size: 1.5em;
 }
 
 /* --- التذييل --- */
 footer {
-    margin-top: 30px;
+    margin-top: 40px;
+    color: rgba(255, 255, 255, 0.8);
     font-size: 0.9em;
-    opacity: 0.8;
+    text-align: center;
 }
+
