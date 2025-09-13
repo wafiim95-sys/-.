@@ -1,89 +1,53 @@
-/* --- خط جوجل لإضفاء لمسة عصرية --- */
-@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap');
+/* --- تنسيقات إضافية لصفحات الأرقام --- */
 
-/* --- إعدادات عامة --- */
-body {
-    font-family: 'Cairo', sans-serif;
-    margin: 0;
-    background: linear-gradient(135deg, #3a47d5 0%, #00d2ff 100%); /* تدرج لوني أزرق جديد */
-    color: #333; /* تغيير لون النص الأساسي للأسود ليتناسب مع البطاقات البيضاء */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-    box-sizing: border-box;
-    min-height: 100vh;
-}
-
-/* --- العنوان الرئيسي --- */
-.header-text {
-    color: #ffffff; /* إبقاء لون نصوص العنوان أبيض */
-    text-align: center;
-    margin-bottom: 30px;
-}
-
-.header-text h1 {
-    font-size: 2.5em;
-    font-weight: 700;
-    margin-bottom: 5px;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
-}
-
-.header-text p {
-    font-size: 1.2em;
-    opacity: 0.9;
-}
-
-/* --- حاوية البطاقات الرئيسية --- */
-.services-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* تصميم متجاوب يناسب كل الشاشات */
-    gap: 25px;
-    width: 100%;
-    max-width: 900px; /* تحديد أقصى عرض للحاوية */
-}
-
-/* --- تصميم البطاقة الواحدة (Card) --- */
-.service-card {
-    background: rgba(255, 255, 255, 0.9); /* خلفية بيضاء شبه شفافة */
+.contact-card {
+    background: rgba(255, 255, 255, 0.9);
     border-radius: 15px;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
-    overflow: hidden; /* مهم جداً لإخفاء أي أجزاء من الصورة تخرج عن الحواف الدائرية */
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 25px;
+}
+
+.contact-card h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 1.8em;
+}
+
+.phone-number {
+    font-size: 1.4em;
+    font-weight: bold;
+    color: #3a47d5; /* لون أزرق مميز للرقم */
+    margin-bottom: 20px;
+    direction: ltr; /* لجعل الأرقام تظهر بشكل صحيح من اليسار لليمين */
+}
+
+.call-button {
+    display: inline-block;
+    background-color: #28a745; /* لون أخضر للاتصال */
+    color: white;
+    padding: 12px 30px;
+    border-radius: 50px; /* حواف دائرية بالكامل */
     text-decoration: none;
-    color: #333;
-    display: flex;
-    flex-direction: column;
-    transition: transform 0.3s, box-shadow 0.3s;
+    font-weight: bold;
+    font-size: 1.1em;
+    transition: background-color 0.3s;
 }
 
-.service-card:hover {
-    transform: translateY(-10px); /* ترتفع البطاقة للأعلى عند اللمس */
-    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2);
+.call-button:hover {
+    background-color: #218838; /* لون أغمق عند اللمس */
 }
 
-/* --- تنسيق الصورة داخل البطاقة --- */
-.service-card img {
-    width: 100%; /* الصورة تملأ عرض البطاقة بالكامل */
-    height: 200px; /* ارتفاع ثابت ومناسب للصور */
-    object-fit: cover; /* أهم خاصية: تضمن أن الصورة تملأ المساحة دون تشويه أو تمدد */
-}
-
-/* --- تنسيق النص داخل البطاقة --- */
-.card-content {
-    padding: 20px;
+.back-link-container {
     text-align: center;
+    margin-top: 30px;
 }
 
-.card-content h3 {
-    margin: 0;
-    font-size: 1.5em;
+.back-link {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    background: rgba(0,0,0,0.2);
+    padding: 10px 20px;
+    border-radius: 8px;
 }
-
-/* --- التذييل --- */
-footer {
-    margin-top: 40px;
-    color: rgba(255, 255, 255, 0.8);
-    font-size: 0.9em;
-    text-align: center;
-}
-
